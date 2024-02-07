@@ -5,9 +5,9 @@ Repositorio donde se quedara recopilado las, notas e información de los diferen
 Algunos de los cursos van enfocados al manejo de datos y otros a los fundamentos de bases de datos los cursos que se verán son:
 
 - Fundamentos de Bases de Datos.
-- PostgreSQL
-- Curso Practico SQL
-- PostgreSQL Aplicado a Ciencia de Datos
+- PostgreSQL.
+- Curso Practico SQL.
+- PostgreSQL Aplicado a Ciencia de Datos.
 - Herramientas de Inteligencia Artificial para Equipos de Datos.
 
 Con esto se espera que logre manejar las bases de datos y hacer consultas SQL de manera practica.
