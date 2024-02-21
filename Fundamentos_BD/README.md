@@ -32,3 +32,17 @@ Entidades débiles: no pueden existir sin una entidad fuerte y se representan co
 ### Representación
 
 ![Notacion chen](./Pictures/Notacion_Chen.png)
+
+## Relaciones
+
+Las relaciones nos permiten ligar o unir nuestras diferentes entidades y se representan con rombos. Por convención se definen a través de verbos.
+
+Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con números. Cuántos de un lado pertenecen a cuántos del otro lado:
+
+- Cardinalidad: 1 a 1
+- Cardinalidad: 0 a 1
+- Cardinalidad: 1 a M
+- Cardinalidad: 0 a M
+- Cardinalidad: M a M
+
+![Relaciones y Cadinalidad](./Pictures/Relaciones.png)
