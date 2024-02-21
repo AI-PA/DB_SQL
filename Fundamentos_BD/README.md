@@ -41,8 +41,20 @@ Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con nú
 
 - Cardinalidad: 1 a 1
 - Cardinalidad: 0 a 1
-- Cardinalidad: 1 a M
-- Cardinalidad: 0 a M
-- Cardinalidad: M a M
+- Cardinalidad: 1 a N
+- Cardinalidad: 0 a N
+- Cardinalidad: N a N
 
 ![Relaciones y Cadinalidad](./Pictures/Relaciones.png)
+
+## Tipos de Datos
+
+|Texto  | Números | Fecha/Hora|Lógicos|
+|-------|---------|-----------|----|
+|CHAR (n)| INTEGER  |DATE| BOOLEAN|
+|VARCHAR (n)| BIGINT | TIME||
+|TEXT| DECIMAL (n,s)| DATETIME||
+||NUMERIC (n,s)| TIMESTAMP||
+||SMALLINT|||
+
+## 
