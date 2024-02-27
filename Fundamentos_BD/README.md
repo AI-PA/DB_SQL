@@ -57,4 +57,14 @@ Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con nú
 ||NUMERIC (n,s)| TIMESTAMP||
 ||SMALLINT|||
 
-## 
+## Restricciones
+
+|Tipo de Restricción | Descripción |
+|----|----------|
+|NOT NULL| Se asegura que la columna no tenga valores nulos|
+|UNIQUE| Se asegura que cada valor en la columna no se repita|
+|PRIMARY KEY| Es una combinación de NOT NULL y UNIQUE|
+|FOREIGN KEY| Identifica de manera única una tupla en otra tabla|
+|CHECK| Se asegura que el valor en la columna cumpla una condición dada|
+|DEFAULT| Coloca un valor por defecto cuando no hay un valor especificado|
+|INDEX| Se crea por columna para permitir búsquedas más rápidas|
