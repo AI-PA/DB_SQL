@@ -117,6 +117,28 @@ Cumple 1FN y 2FN y los campos que NO son clave NO deben tener dependencias.
 
 Esta FN trata de eliminar registros duplicados en una entidad, es decir que cada registro tenga un contenido único y de necesitar repetir la data en los resultados se realiza a través de claves foráneas.
 
-Cumple 1FN, 2FN y 3FN los campos multivaluados se identifican por una clave única.
+Cumple 1FN, 2FN y 3FN los campos multievaluados se identifican por una clave única.
 
 ![Cuarta forma normalizada](./Pictures/4NL_Normalizado.png)
+
+## SQL hasta la sopa
+
+Diferentes sublenguajes del lenguaje SQL
+![SQL Comandos](./Pictures/SQL_Comandos.png)
+
+### Sublenguaje DDL
+
+``` SQL
+#Crear una base de datos
+CREATE DATABASE test_db;
+USER DATABASE test_db;
+
+#Crear una tabla
+CREATE TABLE people(
+  person_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+  last_name VARCHAR(255),
+  first_name VARCHAR(255),
+  address VARCHAR(255),
+  city VARCHAR(255)
+);
+```
