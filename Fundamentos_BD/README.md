@@ -128,6 +128,8 @@ Diferentes sublenguajes del lenguaje SQL
 
 ### Sublenguaje DDL
 
+Creando la infraestructura de la base de datos.
+
 **Creación de bases de datos y tablas** (CREATE).
 
 ``` SQL
@@ -182,3 +184,64 @@ Lo primero a realizar es tomar la tabla people y le añadimos el campo de *date_
 En la segunda modificación cambiamos el campo antes mencionado a un que solo almacene el año.
 
 Y por ultimo eliminamos el cambio de la tabla people.
+
+**Eliminando Datos** (DROP)
+
+```SQL
+DROP TABLE people;
+DROP DATABASE test_db;
+```
+
+La secuencia drop, elimina ya sea la tabla, base de datos o la vista.
+
+Hay que tener suficiente cuidado con este comando porque es un comando sencillo pero puede eliminar todos los datos.
+
+### Sublenguaje DML
+
+Modificando los datos.
+
+Insert
+
+```SQL
+INSERT INTO people (last_name, first_name, address, city)
+VALUES ('Hernandez', 'Laura', 'Calle 21', 'Monterrey')
+```
+
+Introduce los valores a la base de datos de people.
+
+Update
+
+```SQL
+UPDATE people
+SET last_name = 'Chavez', city='Merida'
+WHERE person_id = 1;
+
+UPDATE people 
+SET first_name = 'Juan'
+WHERE city = 'Merida'
+
+UPDATE people
+SET first_name ='Juan';
+```
+
+Actualizando los datos de la tabla people.
+
+Delete
+
+```SQL
+DELETE FROM people
+WHERE person_id = 1;
+
+DELETE FROM people;
+```
+
+Elimina un registro de acuerdo a los parámetros que seleccionemos.
+
+Select
+
+```SQL
+SELECT first_name, last_name
+FROM people;
+```
+
+Selecciona los diferentes datos y campos relacionados.
