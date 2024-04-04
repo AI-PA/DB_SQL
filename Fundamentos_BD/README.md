@@ -128,6 +128,8 @@ Diferentes sublenguajes del lenguaje SQL
 
 ### Sublenguaje DDL
 
+**Creación de bases de datos y tablas** (CREATE).
+
 ``` SQL
 #Crear una base de datos
 CREATE DATABASE test_db;
@@ -142,3 +144,41 @@ CREATE TABLE people(
   city VARCHAR(255)
 );
 ```
+
+En este caso lo primero que estamos haciendo es crear la base de datos llamada test_db y seleccionándola.
+
+Lo siguiente a realizar es crear la tabla people cuyo campo llave es *person_id* en el cual lo llamamos clave primaria que sea autoincremental es decir que vaya aumentando en cada registro y que no se permita que este campo se encentré vació.
+
+Los siguientes campos son en su gran mayoría texto a 255 Caracteres.
+
+**Creando una vista** (SELECT)
+
+```SQL
+# Crear View
+CREATE OR REPLACE VIEW v_brasil_customers AS 
+  SELECT customer_name,
+  contact_name
+  FROM customers
+  WHERE country = "Brasil";
+```
+
+En este código empieza checando si ya existe la vista *v_brasil_customers* en caso de que no, lo crea seleccionando los campos de *[ customer_name, contact_name]* de la tabla customers donde el país de residencia sea brasil.
+
+**Modificar una tabla** (ALTER)
+
+```SQL
+ALTER TABLE people
+ADD date_of_birth DATE;
+
+ALTER TABLE people
+ALTER COLUMN date_of_birth YEAR;
+
+ALTER TABLE people
+DROP COLUMN date_of_birth;
+```
+
+Lo primero a realizar es tomar la tabla people y le añadimos el campo de *date_of_birth* el cual especificamos que sea de tipo fecha.
+
+En la segunda modificación cambiamos el campo antes mencionado a un que solo almacene el año.
+
+Y por ultimo eliminamos el cambio de la tabla people.
