@@ -245,3 +245,19 @@ FROM people;
 ```
 
 Selecciona los diferentes datos y campos relacionados.
+
+## Consultas a una base de datos
+
+Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
+Alrededor de las consultas a las bases de datos se han creado varias especialidades como ETL o transformación de datos, business intelligence e incluso machine learning.
+
+```SQL
+SELECT city, count (*) AS total
+FROM people
+WHERE active = true
+GROUP BY city
+ORDER BY total DESC
+HAVING total >=2 ;
+```
+
+Estructura de una query
