@@ -260,4 +260,27 @@ ORDER BY total DESC
 HAVING total >=2 ;
 ```
 
-Estructura de una query
+### Estructura de una query
+
+Los queries son la forma en la que estructuramos las preguntas que se harán a la base de datos. Transforma preguntas en sintaxis.
+
+El query tiene básicamente 2 partes: SELECT y FROM y puede aparecer una tercera como WHERE.
+
+La estrellita o asterisco (*) quiere decir que vamos a seleccionar todo sin filtrar campos.
+
+**Estructura Select**
+SELECT se encarga de proyectar o mostrar datos.
+
+El nombre de las columnas o campos que estamos consultando puede ser cambiado utilizando AS después del nombre del campo y poniendo el nuevo que queremos tener:
+
+```SQL
+SELECT titulo AS encabezado
+FROM post;
+```
+
+Existe una función de SELECT para poder contar la cantidad de registros. Esa información (un número) será el resultado del query:
+
+```SQL
+SELECT COUNT(*)
+FROM post;
+```
