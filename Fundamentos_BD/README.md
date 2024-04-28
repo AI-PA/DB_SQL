@@ -291,3 +291,56 @@ FROM indica de dónde se deben traer los datos y puede ayudar a hacer sentencias
 Los diagramas de Venn son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos. Ayudan mucho para poder formular la sentencia JOIN de la manera adecuada dependiendo del query que se quiere hacer.
 
 ![Tipos de Join](./Pictures/Tipos_Join.png)
+
+**WHERE**
+WHERE es la sentencia que nos ayuda a filtrar tuplas o registros dependiendo de las características que elegimos.
+
+- La propiedad LIKE nos ayuda a traer registros de los cuales conocemos sólo una parte de la información.
+- La propiedad BETWEEN nos sirve para arrojar registros que estén en el medio de dos. Por ejemplo los registros con id entre 20 y 30.
+
+```SQL
+SELECT * 
+FROM post 
+WHERE fecha_publicacion > "2025-01-01";
+```
+
+Filtra todos los registros de la tabla post que cumplan la condición que sean mayor a la fecha del 01/01/2025.
+
+```SQL 
+SELECT * 
+FROM post 
+WHERE titulo LIKE '%escandalo%';
+```
+
+Filtra los datos de la tabla post que en el titulo contenga la palabra escándalo.
+
+```SQL
+SELECT * 
+FROM post 
+WHERE fecha_publicacion BETWEEN '2023-01-01' AND '2025-01-01';
+```
+
+Devuelve todos los datos que se encuentren entre el 01/01/2023 al 01/01/2025
+
+Where con nulo y no nulo
+El valor nulo en una tabla generalmente es su valor por defecto cuando nadie le asignó algo diferente. La sintaxis para hacer búsquedas de datos nulos es IS NULL. La sintaxis para buscar datos que no son nulos es IS NOT NULL
+
+```SQL
+SELECT * 
+FROM post 
+WHERE usuario IS NOT NULL;
+```
+
+Devuelve todos los post que cuenten con un usuario
+
+```SQL
+SELECT * 
+FROM post 
+WHERE usuario IS NOT NULL 
+  AND estatus ='activo'
+  AND id <50
+  AND categoria_id =2
+  ;
+```
+
+Filtra los post que cuenten con usuario y el usuario este activo donde el post debe tener un id menor a 50 y la categoría debe ser igual a 2.
