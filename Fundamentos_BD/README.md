@@ -344,3 +344,36 @@ WHERE usuario IS NOT NULL
 ```
 
 Filtra los post que cuenten con usuario y el usuario este activo donde el post debe tener un id menor a 50 y la categoría debe ser igual a 2.
+
+**GROUP BY**
+GROUP BY tiene que ver con agrupación. Indica a la base de datos qué criterios debe tener en cuenta para agrupar.
+
+```SQL
+SELECT estatus MONTH NAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity
+FROM posts
+GROUP BY estatus, post_month;
+```
+
+Agrupa los datos por estatus y mes del mes en el que fueron publicados
+
+**ORDER BY y HAVING**
+La sentencia ORDER BY tiene que ver con el ordenamiento de los datos dependiendo de los criterios que quieras usar.
+
+- ASC sirve para ordenar de forma ascendente.
+- DESC sirve para ordenar de forma descendente.
+- LIMIT se usa para limitar la cantidad de resultados que arroja el query.
+
+HAVING tiene una similitud muy grande con WHERE, sin embargo el uso de ellos depende del orden. Cuando se quiere seleccionar tuplas agrupadas únicamente se puede hacer con HAVING.
+
+```SQL
+SELECT *
+FROM posts
+ORDER BY fecha_publicacion ASC;
+```
+
+```SQL
+SELECT *
+FROM posts
+ORDER BY fecha_publicacion ASC
+LIMIT 5;
+```
